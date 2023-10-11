@@ -1,4 +1,6 @@
-﻿using Banking.Logic;
+// this is the old version of the code, please do not pay attention to this
+// the final version of Level 2 is in the CheckLedger.cs file
+using Banking.Logic;
 
 var accountFileData = File.ReadAllLines(@"C:\Users\Kathi\Dokumente\cs-codes\PROO\005-Bank\Banking.CheckLedger\accounts.txt"); //args[0]
 var transactionFileData = File.ReadAllLines(@"C:\Users\Kathi\Dokumente\cs-codes\PROO\005-Bank\Banking.CheckLedger\transactions.txt"); //args[1]
