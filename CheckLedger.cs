@@ -50,11 +50,17 @@ Account CreateAnAccount(string accountData)
         "c" => new CheckingAccount(),
         "b" => new BusinessAccount(),
         "s" => new SavingsAccount(),
+        "f" => new FixedDeposite(),
         _ => throw new ArgumentException("Invalid account type.")
     };
     myAccount.AccountNumber = data[1];
     myAccount.AccountHolder = data[2];
     myAccount.CurrentBalance = decimal.Parse(data[3]);
+    if (myAccount is FixedDeposite fixedDeposite)
+    {
+        fixedDeposite.OpeningDate = DateOnly.Parse(data[4]);
+        fixedDeposite.FixedUntil = DateOnly.Parse(data[5]);
+    }
     return myAccount;
 }
 
