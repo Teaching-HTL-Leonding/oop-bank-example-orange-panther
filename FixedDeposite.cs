@@ -2,11 +2,6 @@ namespace Banking.Logic;
 
 public class FixedDeposite : Account
 {
-    public FixedDeposite(DateOnly openingDate, DateOnly fixedUntil)
-    {
-        OpeningDate = openingDate;
-        FixedUntil = fixedUntil;
-    }
     public DateOnly OpeningDate { get; set; }
     public DateOnly FixedUntil { get; set; }
 

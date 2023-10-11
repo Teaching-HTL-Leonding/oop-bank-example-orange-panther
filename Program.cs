@@ -1,6 +1,5 @@
 ﻿using Banking.Logic;
 
-DateOnly openDate = DateOnly.MinValue, fixedDate = DateOnly.MinValue;
 Console.Write("Type of account ([c]hecking, [b]usiness, [s]avings, [f]ixed deposite: ");
 var type = Console.ReadLine()!;
 Account myAccount = type switch
@@ -8,7 +7,7 @@ Account myAccount = type switch
     "c" => new CheckingAccount(),
     "b" => new BusinessAccount(),
     "s" => new SavingsAccount(),
-    "f" => new FixedDeposite(openDate, fixedDate),
+    "f" => new FixedDeposite(),
     _ => throw new ArgumentException("Invalid account type.")
 };
 Console.Write("Account number: ");
